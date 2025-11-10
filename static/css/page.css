@@ -1,0 +1,55 @@
+/* 页脚与头图透明效果 */
+/* 白天模式 */
+#footer {
+    background: transparent !important;
+}
+
+#page-header {
+    background: transparent !important;
+}
+
+/* 白天模式遮罩透明 */
+#footer::before {
+    background: transparent !important;
+}
+
+#page-header::before {
+    background: transparent !important;
+}
+
+/* 夜间模式 */
+[data-theme="dark"] #footer {
+    background: transparent !important;
+}
+
+[data-theme="dark"] #page-header {
+    background: transparent !important;
+}
+
+/* 夜间模式遮罩透明 */
+[data-theme="dark"] #footer::before {
+    background: transparent !important;
+}
+
+[data-theme="dark"] #page-header::before {
+    background: transparent !important;
+}
+
+/* 居中导航菜单 */
+/* 导航菜单居中 */
+#nav .menus_items {
+    position: absolute !important;
+    width: fit-content !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+/* 修正悬停显示子菜单 */
+#nav .menus_items .menus_item:hover .menus_item_child {
+    display: flex !important;
+}
+
+/* 调整第二个菜单项的子菜单位置 */
+.menus_items .menus_item:nth-child(2) .menus_item_child {
+    left: -35px;
+}
